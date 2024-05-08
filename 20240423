@@ -1,0 +1,30 @@
+class Car(private val model: String, private val speed: Int, private val gas: Int ) {
+
+    fun getSpeeds(): Int {
+        return speed
+    }
+
+    fun increaseSpeed() {
+        if (gas > 0) {
+            println("$model 속도 증가")
+        } else {
+            println("$model 가스 앵꼬")
+        }
+    }
+
+    fun addGas(newGas: Int) {
+        println("$model 에 $newGas 리터 가스 추가")
+    }
+
+}
+
+val myCar = Car("마이바흐 S클래스", 250, 50)
+
+println(myCar.getSpeeds())
+
+myCar.increaseSpeed()
+println(myCar.getSpeeds())
+
+myCar.addGas(100)
+myCar.increaseSpeed()
+println(myCar.getSpeeds())
